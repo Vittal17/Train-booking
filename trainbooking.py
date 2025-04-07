@@ -72,7 +72,7 @@ class railway_system:
             bookings_str += f"{passenger}: {details}\n"
         return True, bookings_str
 
-def main():
+def main(): #test push
     st.title("Railway booking system")
     system = railway_system()
     if "system" not in st.session_state:
