@@ -1,0 +1,14 @@
+name: CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: build docker image
+      run: docker build -t trainbooking:latest .
+    - name: test it
+      run: |
+        docker run -d -p 8501:8501 trainbooking:latest
+        sleep 5
+        curl http://localhost:8501
