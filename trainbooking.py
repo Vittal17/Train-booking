@@ -64,7 +64,7 @@ class railway_system:
             return True, f"{passenger}’s bookings: {self.all_bookings[passenger]}"
         return False, "no bookings found"
 
-    def admin_view(self):
+    def admin_view(self): #final CI push
         if not self.all_bookings:
             return False, "no bookings yet"
         bookings_str = "ALL BOOKINGS:\n"
